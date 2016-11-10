@@ -8,5 +8,9 @@
 </head>
 <body>
 	<a href="helloworld">Hello World</a>
+	<br><br>
+	
+	<a href="springmvc/testRequestMapping">Test ReqestMapping</a>
+	
 </body>
 </html>
