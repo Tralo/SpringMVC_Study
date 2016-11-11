@@ -12,5 +12,11 @@
 	
 	<a href="springmvc/testRequestMapping">Test ReqestMapping</a>
 	
+	<br><br>
+	
+	<form action="springmvc/testMethod" method="post">
+		<input type="submit" value="提交">
+	</form>
+	
 </body>
 </html>
