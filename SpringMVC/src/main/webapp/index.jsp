@@ -18,5 +18,9 @@
 		<input type="submit" value="提交">
 	</form>
 	
+	<br><br>
+	
+	<a href="springmvc/testParamsAndHeaders?username=haha&age=10">Test ParamsAndHeaders</a>
+	
 </body>
 </html>

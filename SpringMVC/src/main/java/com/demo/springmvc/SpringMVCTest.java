@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	@RequestMapping(value="testParamsAndHeaders",params={"username","age!=10"})
+	public String testParamsAndHeaders(){
+		System.out.println("testParamsAndHeaders");
+		return SUCCESS;
+	}
 	
 	/**
 	 * 使用 method 属性来指定 请求方式
