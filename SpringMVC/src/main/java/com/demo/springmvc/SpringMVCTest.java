@@ -1,6 +1,7 @@
 package com.demo.springmvc;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/springmvc")
@@ -8,6 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	@RequestMapping("/testPathVariable/{id}")
+	public String testPathVariable(@PathVariable("id") Integer id){
+		System.out.println("testParamsAndHeaders: " + id);
+		return SUCCESS;
+	}
 	
 	@RequestMapping("/testAntPath/*/abc")
 	public String testAntPath(){

@@ -26,5 +26,8 @@
 	
 	<a href="springmvc/testAntPath/ggaa/abc">Test AntPath</a>
 	
+	<br><br>
+	<a href="springmvc/testPathVariable">Test PathVariable</a>
+	
 </body>
 </html>
