@@ -4,13 +4,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
 	
-	
+	@RequestMapping(value="/testRequestParam")
+	public String testRequestParam(@RequestParam(value="username") String um,@RequestParam(value="age", required=false,defaultValue="0") Integer age){
+		System.out.println("testRequestParam: username = " + um + "  age=" + age);
+		return SUCCESS;
+	}
 	
 	@RequestMapping(value="/testRestPut/{id}",method=RequestMethod.PUT)
 	public String testRestPut(@PathVariable Integer id){

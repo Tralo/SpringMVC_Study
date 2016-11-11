@@ -46,5 +46,7 @@
 		<input type="hidden" name="_method" value="PUT">
 		<input type="submit" value="Test Rest Put">
 	</form>
+	<br><br>
+	<a href="springmvc/testRequestParam?username&age=100">Test RequestParam</a>
 </body>
 </html>
