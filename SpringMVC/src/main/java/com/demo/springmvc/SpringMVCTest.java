@@ -9,6 +9,34 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	
+	
+	
+	@RequestMapping(value="/testRestPut/{id}",method=RequestMethod.PUT)
+	public String testRestPut(@PathVariable Integer id){
+		System.out.println("testRestPut: " + id);
+		return SUCCESS;
+	}
+	
+	@RequestMapping(value="/testRestDelete/{id}",method=RequestMethod.DELETE)
+	public String testRestDelete(@PathVariable Integer id){
+		System.out.println("testRestDelete: " + id);
+		return SUCCESS;
+	}
+	
+	@RequestMapping(value="/testRest",method=RequestMethod.POST)
+	public String testRest(){
+		System.out.println("testRest POST");
+		return SUCCESS;
+	}
+	
+	@RequestMapping(value="/testRest/{id}",method=RequestMethod.GET)
+	public String testRest(@PathVariable Integer id){
+		System.out.println("testRest GET: " + id);
+		return SUCCESS;
+	}
+	
+	
 	@RequestMapping("/testPathVariable/{id}")
 	public String testPathVariable(@PathVariable("id") Integer id){
 		System.out.println("testParamsAndHeaders: " + id);

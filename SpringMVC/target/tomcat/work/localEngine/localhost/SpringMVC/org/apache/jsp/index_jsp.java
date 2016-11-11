@@ -79,7 +79,24 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\n");
       out.write("\t<br><br>\n");
       out.write("\t<a href=\"springmvc/testPathVariable\">Test PathVariable</a>\n");
+      out.write("\t<br><br>\n");
+      out.write("\t<a href=\"springmvc/testRest/1\">Test Rest Get</a>\n");
+      out.write("\t<br><br>\n");
+      out.write("\t<form action=\"springmvc/testRest\" method=\"post\">\n");
+      out.write("\t\t<input type=\"submit\" value=\"Test Rest POST\">\n");
+      out.write("\t</form>\n");
       out.write("\t\n");
+      out.write("\t<br><br>\n");
+      out.write("\t\n");
+      out.write("\t<form action=\"springmvc/testRestDelete/1\" method=\"post\">\n");
+      out.write("\t\t<input type=\"hidden\" name=\"_method\" value=\"DELETE\">\n");
+      out.write("\t\t<input type=\"submit\" value=\"Test Rest Delete\">\n");
+      out.write("\t</form>\n");
+      out.write("\t<br><br>\n");
+      out.write("\t<form action=\"springmvc/testRestPut/1\" method=\"post\">\n");
+      out.write("\t\t<input type=\"hidden\" name=\"_method\" value=\"PUT\">\n");
+      out.write("\t\t<input type=\"submit\" value=\"Test Rest Put\">\n");
+      out.write("\t</form>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

@@ -28,6 +28,23 @@
 	
 	<br><br>
 	<a href="springmvc/testPathVariable">Test PathVariable</a>
+	<br><br>
+	<a href="springmvc/testRest/1">Test Rest Get</a>
+	<br><br>
+	<form action="springmvc/testRest" method="post">
+		<input type="submit" value="Test Rest POST">
+	</form>
 	
+	<br><br>
+	
+	<form action="springmvc/testRestDelete/1" method="post">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Test Rest Delete">
+	</form>
+	<br><br>
+	<form action="springmvc/testRestPut/1" method="post">
+		<input type="hidden" name="_method" value="PUT">
+		<input type="submit" value="Test Rest Put">
+	</form>
 </body>
 </html>
