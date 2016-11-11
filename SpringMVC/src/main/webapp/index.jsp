@@ -22,5 +22,9 @@
 	
 	<a href="springmvc/testParamsAndHeaders?username=haha&age=10">Test ParamsAndHeaders</a>
 	
+	<br><br>
+	
+	<a href="springmvc/testAntPath/ggaa/abc">Test AntPath</a>
+	
 </body>
 </html>

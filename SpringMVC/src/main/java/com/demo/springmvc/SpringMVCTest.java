@@ -8,6 +8,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	
+	@RequestMapping("/testAntPath/*/abc")
+	public String testAntPath(){
+		System.out.println("testAntPath");
+		return SUCCESS;
+	}
+	
 	@RequestMapping(value="testParamsAndHeaders",params={"username","age!=10"})
 	public String testParamsAndHeaders(){
 		System.out.println("testParamsAndHeaders");
