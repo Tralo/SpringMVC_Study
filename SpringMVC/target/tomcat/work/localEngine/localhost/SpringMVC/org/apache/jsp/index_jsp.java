@@ -105,6 +105,17 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\n");
       out.write("\t<br><br>\n");
       out.write("\t<a href=\"springmvc/testCookieValue\">Test CookieValue</a>\n");
+      out.write("\t<br><br>\n");
+      out.write("\t<form action=\"springmvc/testPojo\" method=\"post\">\n");
+      out.write("\t\tusername: <input type=\"text\" name=\"username\" /><br>\n");
+      out.write("\t\tpassword: <input type=\"password\" name=\"password\"/><br>\n");
+      out.write("\t\temail: <input type=\"text\" name=\"email\"/><br>\n");
+      out.write("\t\tage: <input type=\"text\" name=\"age\"/><br>\n");
+      out.write("\t\tprovince: <input type=\"text\" name=\"address.province\"/><br>\n");
+      out.write("\t\tcity: <input type=\"text\" name=\"address.city\"/><br>\n");
+      out.write("\t\t<input type=\"submit\" value=\"Submit\" >\n");
+      out.write("\t</form>\n");
+      out.write("\t\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

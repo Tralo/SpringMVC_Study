@@ -7,11 +7,20 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.demo.springmvc.entity.User;
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	
+	@RequestMapping("/testPojo")
+	public String testPojo(User user){
+		System.out.println("testPojo:  " + user);
+		return SUCCESS;
+	}
+	
 	@RequestMapping(value="/testCookieValue")
 	public String testCookieValue(@CookieValue("JSESSIONID") String sessionId){
 		System.out.println("testCookieValue: JSESSIONID  =  " + sessionId);
