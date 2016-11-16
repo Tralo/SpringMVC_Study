@@ -1,5 +1,7 @@
 package com.demo.springmvc;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.springmvc.entity.User;
 @RequestMapping("/springmvc")
@@ -14,6 +17,21 @@ import com.demo.springmvc.entity.User;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	
+	/**
+	 * 目标方法的返回值可以是ModelAndView类型。
+	 * 其中可以包含视图和数据
+	 * @return
+	 */
+	@RequestMapping("/testModelAndView")
+	public ModelAndView testModelAndView(){
+		String viewName = SUCCESS;
+		ModelAndView modelAndView = new ModelAndView(SUCCESS);
+		
+		//添加模型数据到 ModelAndView中
+		modelAndView.addObject("time",new Date());
+		return modelAndView;
+	}
 	
 	@RequestMapping("/testPojo")
 	public String testPojo(User user){

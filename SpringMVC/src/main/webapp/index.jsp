@@ -64,6 +64,7 @@
 		city: <input type="text" name="address.city"/><br>
 		<input type="submit" value="Submit" >
 	</form>
-	
+	<br><br>
+	<a href="springmvc/testModelAndView">Test ModelAndView</a>
 </body>
 </html>

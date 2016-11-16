@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>Success Page</h1>
+	time: ${requestScope.time }
 </body>
 </html>
