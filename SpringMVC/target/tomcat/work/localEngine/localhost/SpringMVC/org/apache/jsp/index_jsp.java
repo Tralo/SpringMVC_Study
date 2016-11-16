@@ -99,6 +99,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</form>\n");
       out.write("\t<br><br>\n");
       out.write("\t<a href=\"springmvc/testRequestParam?username&age=100\">Test RequestParam</a>\n");
+      out.write("\t\n");
+      out.write("\t<br><br>\n");
+      out.write("\t<a href=\"springmvc/testRequestHeader\">Test RequestHeader</a>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

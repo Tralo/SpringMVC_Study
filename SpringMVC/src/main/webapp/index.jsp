@@ -48,5 +48,8 @@
 	</form>
 	<br><br>
 	<a href="springmvc/testRequestParam?username&age=100">Test RequestParam</a>
+	
+	<br><br>
+	<a href="springmvc/testRequestHeader">Test RequestHeader</a>
 </body>
 </html>
