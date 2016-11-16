@@ -1,6 +1,7 @@
 package com.demo.springmvc;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	@RequestMapping(value="/testCookieValue")
+	public String testCookieValue(@CookieValue("JSESSIONID") String sessionId){
+		System.out.println("testCookieValue: JSESSIONID  =  " + sessionId);
+		return SUCCESS;
+	}
 	
 	@RequestMapping(value="/testRequestHeader")
 	public String testRequestHeader(@RequestHeader(value="Accept-Language") String al){
