@@ -14,5 +14,18 @@
 	
 	<br><br>
 	
+	user: ${requestScope.user }
+	
+	<br><br>
+	session: ${sessionScope.user }
+	
+	
+	<br><br>
+	
+	school: ${requestScope.school }
+	
+	<br><br>
+	school: ${sessionScope.school }
+	
 </body>
 </html>

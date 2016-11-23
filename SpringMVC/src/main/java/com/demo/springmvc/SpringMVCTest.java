@@ -11,14 +11,33 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.springmvc.entity.User;
+@SessionAttributes(value={"user"},types={String.class})
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	
+	/**
+	 * @SessionAttributes 除了可以通过属性名指定需要放到会话中的属性外(实际上使用的是 value 属性值)
+	 * 还以通过模型属性的对象类型指定哪些模型属性需要放到会话中(实际上使用的是 types 属性值)
+	 * 
+	 * 注意: 该注解智能放在类上，而不能放在方法上
+	 * @param map
+	 * @return
+	 */
+	@RequestMapping("/testSessionAttributes")
+	public String testSessionAttributes(Map<String,Object> map){
+		User user = new User("Tom","123456","a@a.com",15);
+		map.put("user", user);
+		map.put("school", "Gdusf");
+		return SUCCESS;
+	}
+	
 	/**
 	 * 目标方法可以添加Map类型(实际上也可以是Model类型或 ModelMap 类型）的参数
 	 * @param map

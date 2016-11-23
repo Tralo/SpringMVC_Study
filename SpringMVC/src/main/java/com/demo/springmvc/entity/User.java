@@ -6,6 +6,16 @@ public class User {
 	private String email;
 	private int age;
 	
+	public User() {
+	}
+	
+	public User(String username, String password, String address, int age) {
+		this.username = username;
+		this.password = password;
+		this.age = age;
+		this.address = new Address();
+		this.address.setCity(address);
+	}
 	private Address address;
 	
 	public String getUsername() {

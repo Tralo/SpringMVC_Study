@@ -69,6 +69,27 @@ public final class success_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\n");
       out.write("\t<br><br>\n");
       out.write("\t\n");
+      out.write("\tuser: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${requestScope.user }", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\n");
+      out.write("\t\n");
+      out.write("\t<br><br>\n");
+      out.write("\tsession: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sessionScope.user }", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\n");
+      out.write("\t\n");
+      out.write("\t\n");
+      out.write("\t<br><br>\n");
+      out.write("\t\n");
+      out.write("\tschool: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${requestScope.school }", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\n");
+      out.write("\t\n");
+      out.write("\t<br><br>\n");
+      out.write("\tschool: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${sessionScope.school }", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\n");
+      out.write("\t\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
