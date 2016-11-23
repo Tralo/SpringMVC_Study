@@ -62,6 +62,13 @@ public final class success_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\ttime: ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${requestScope.time }", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\n");
+      out.write("\t<br><br>\n");
+      out.write("\tnames: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${requestScope.names }", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\n");
+      out.write("\t\n");
+      out.write("\t<br><br>\n");
+      out.write("\t\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

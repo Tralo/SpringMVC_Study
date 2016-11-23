@@ -1,6 +1,8 @@
 package com.demo.springmvc;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -17,10 +19,22 @@ import com.demo.springmvc.entity.User;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	/**
+	 * 目标方法可以添加Map类型(实际上也可以是Model类型或 ModelMap 类型）的参数
+	 * @param map
+	 * @return
+	 */
+	@RequestMapping("/testMap")
+	public String testMap(Map<String,Object> map){
+		System.out.println(map.getClass().getName());
+		map.put("names", Arrays.asList("tom","Jerry","Mike"));
+		return SUCCESS;
+	}
 	
 	/**
-	 * 目标方法的返回值可以是ModelAndView类型。
+	 * 目标方法的返回值可以是ModelAndView类型。 
 	 * 其中可以包含视图和数据
+	 * SpringMVC 会把ModelAndView 的 model 中数据放入到 request 域对象中.
 	 * @return
 	 */
 	@RequestMapping("/testModelAndView")

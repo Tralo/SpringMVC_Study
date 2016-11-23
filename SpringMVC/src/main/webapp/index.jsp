@@ -66,5 +66,7 @@
 	</form>
 	<br><br>
 	<a href="springmvc/testModelAndView">Test ModelAndView</a>
+	<br><br>
+	<a href="springmvc/testMap">Test Map</a>
 </body>
 </html>

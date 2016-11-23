@@ -9,5 +9,10 @@
 <body>
 	<h1>Success Page</h1>
 	time: ${requestScope.time }
+	<br><br>
+	names: ${requestScope.names }
+	
+	<br><br>
+	
 </body>
 </html>
