@@ -1,6 +1,7 @@
 package com.demo.springmvc.entity;
 
 public class User {
+	private Integer id;
 	private String username;
 	private String password;
 	private String email;
@@ -9,15 +10,32 @@ public class User {
 	public User() {
 	}
 	
-	public User(String username, String password, String address, int age) {
+	public User(int id,String username, String password, String email,int age) {
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.age = age;
-		this.address = new Address();
-		this.address.setCity(address);
+		this.email = email;
+	}
+	
+	public User(String username, String password, String email, int age) {
+		this.username = username;
+		this.password = password;
+		this.age = age;
+		this.email = email;
 	}
 	private Address address;
 	
+	
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getUsername() {
 		return username;
 	}
@@ -51,12 +69,14 @@ public class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
+
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", password=" + password
-				+ ", email=" + email + ", age=" + age + ", address=" + address
-				+ "]";
+		return "User [id=" + id + ", username=" + username + ", password="
+				+ password + ", email=" + email + ", age=" + age + ", address="
+				+ address + "]";
 	}
+	
 	
 	
 	

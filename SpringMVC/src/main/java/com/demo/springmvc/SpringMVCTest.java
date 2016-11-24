@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +16,32 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.springmvc.entity.User;
-@SessionAttributes(value={"user"},types={String.class})
+//@SessionAttributes(value={"user"},types={String.class})
 @RequestMapping("/springmvc")
 @Controller
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	/**
+	 * 有ModelAttribute 标记的方法，会在每个目标方法执行之前会被SpringMVC调用
+	 * @param id
+	 * @param map
+	 */
+	@ModelAttribute
+	public void getUser(@RequestParam(value="id",required = false) Integer id,Map<String,Object> map){
+		System.out.println("被执行了");
+		if(id != null){
+			User user = new User(1,"Tom","123456","a@a.com",12);
+			System.out.println("从数据库中获取一个对象: " + user);
+			map.put("user", user);
+		}
+	}
+	
+	@RequestMapping("/testModelAttribute")
+	public String testModelAttribute(User user){
+		System.out.println("修改:  " + user);
+		return SUCCESS;
+	}
 	
 	/**
 	 * @SessionAttributes 除了可以通过属性名指定需要放到会话中的属性外(实际上使用的是 value 属性值)
@@ -149,7 +170,6 @@ public class SpringMVCTest {
 	 */
 	@RequestMapping("/testRequestMapping")
 	public String testRequestMapping(){
-		
 		System.out.println("testRequestMapping");
 		return SUCCESS;
 	}

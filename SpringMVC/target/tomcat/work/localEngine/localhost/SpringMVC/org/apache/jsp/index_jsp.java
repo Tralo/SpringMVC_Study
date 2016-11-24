@@ -122,6 +122,20 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\n");
       out.write("\t<br><br>\n");
       out.write("\t<a href=\"springmvc/testSessionAttributes\">Test SessionAttributes</a>\n");
+      out.write("\t<!-- 模拟修改操作\n");
+      out.write("\t\t1.原始数据: 1, Tom, 123456, a@a.com, 12\n");
+      out.write("\t\t2.密码不能修改\n");
+      out.write("\t\t3.表单回显，模拟操作直接在表单填写对应的属性值\n");
+      out.write("\t -->\n");
+      out.write("\t<br><br>\n");
+      out.write("\t<form action=\"springmvc/testModelAttribute\" method=\"post\">\n");
+      out.write("\t\t<input type=\"hidden\" name=\"id\" value=\"1\" />\n");
+      out.write("\t\tusername: <input type=\"text\" name=\"username\" value=\"Tome\" /><br>\n");
+      out.write("\t\temail: <input type=\"text\" name=\"email\" value=\"a@a.com\"/><br>\n");
+      out.write("\t\tage: <input type=\"text\" name=\"age\" value=\"12\"/><br>\n");
+      out.write("\t\t\n");
+      out.write("\t\t<input type=\"submit\" value=\"Submit\" >\n");
+      out.write("\t</form>\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
