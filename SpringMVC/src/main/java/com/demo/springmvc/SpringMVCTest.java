@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.springmvc.entity.User;
+
 //@SessionAttributes(value={"user"},types={String.class})
 @RequestMapping("/springmvc")
 @Controller
@@ -171,6 +171,12 @@ public class SpringMVCTest {
 	@RequestMapping("/testRequestMapping")
 	public String testRequestMapping(){
 		System.out.println("testRequestMapping");
+		return SUCCESS;
+	}
+	
+	@RequestMapping("/testViewAndViewResolver")
+	public String testViewAndViewResolver(){
+		System.out.println("testViewAndViewResolver");
 		return SUCCESS;
 	}
 	
