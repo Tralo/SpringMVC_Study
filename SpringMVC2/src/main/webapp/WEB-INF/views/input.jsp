@@ -25,12 +25,14 @@
 	 	<br>
 	 	<%  Map<String,String> genders = new HashMap<String,String>(); 
 	 		genders.put("1", "Male");
-	 		genders.put("1", "Female");
+	 		genders.put("0", "Female");
 	 		request.setAttribute("genders", genders);
 	 	%>
-	 	Gender: <form:radiobuttons path="gender" items="${genders }" />
+	 	Gender: 
 	 	<br>
-	 	Department: <form:select path="department" items="${departments }" itemLabel="departmentName" itemValue="id"></form:select>
+	 	<form:radiobuttons path="gender" items="${genders }" delimiter="<br>" />
+	 	<br>
+	 	Department: <form:select path="department.id" items="${departments }" itemLabel="departmentName" itemValue="id"></form:select>
 	 	<br>
 	 	<input type="submit" value="Submit" />
 	 	

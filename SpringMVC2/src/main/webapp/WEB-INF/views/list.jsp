@@ -4,10 +4,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<!-- 
+	SpringMVC 处理静态资源 
+-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.delete').click(function(){
+			var href = $(this).attr("href");
+			$('form').attr('action',href);
+			$('form').submit();
+			return false;
+		});
+	})
+</script>
 </head>
 <body>
+
+	<form action="" method="POST">
+		<input type="hidden" name="_method" value="DELETE"/>
+	</form>
+
 	<c:if test="${empty requestScope.employees }">
 		没有任何员工信息
 	</c:if>
@@ -30,7 +49,7 @@
 					<th>${emp.gender == 0 ? 'Female' : 'Male' }</th>
 					<th>${emp.department.departmentName }</th>
 					<th><a href="">Eidt</a></th>
-					<th><a href="">Delete</a></th>
+					<th><a class="delete" href="emp/${emp.id }">Delete</a></th>
 				</tr>
 			</c:forEach>
 		</table>
