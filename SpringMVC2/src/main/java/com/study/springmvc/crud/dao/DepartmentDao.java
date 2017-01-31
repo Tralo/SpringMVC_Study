@@ -15,10 +15,10 @@ public class DepartmentDao {
 		deparments = new HashMap<Integer, Department>();
 		
 		deparments.put(101, new Department(101, "D-AA"));
-		deparments.put(101, new Department(102, "D-BB"));
-		deparments.put(101, new Department(103, "D-CC"));
-		deparments.put(101, new Department(104, "D-DD"));
-		deparments.put(101, new Department(105, "D-EE"));
+		deparments.put(102, new Department(102, "D-BB"));
+		deparments.put(103, new Department(103, "D-CC"));
+		deparments.put(104, new Department(104, "D-DD"));
+		deparments.put(105, new Department(105, "D-EE"));
 		
 	}
 	
