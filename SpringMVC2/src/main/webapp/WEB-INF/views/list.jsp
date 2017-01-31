@@ -48,7 +48,7 @@
 					<th>${emp.email }</th>
 					<th>${emp.gender == 0 ? 'Female' : 'Male' }</th>
 					<th>${emp.department.departmentName }</th>
-					<th><a href="">Eidt</a></th>
+					<th><a href="emp/${emp.id }">Eidt</a></th>
 					<th><a class="delete" href="emp/${emp.id }">Delete</a></th>
 				</tr>
 			</c:forEach>

@@ -1,6 +1,7 @@
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix='form' uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,9 +18,18 @@
 			指定该属性，则默认从request域对象中读取 command 的表单bean
 			如果该属性值也不存在，则会发生错误。
 	 -->
-	 <form:form action="emp" method="post" modelAttribute="employee">
+	 <form:form action="${pageContext.request.contextPath }/emp" method="post" modelAttribute="employee">
 	 	<!-- path 属性对应html 表单标签 name 属性 -->
-	 	LastName: <form:input path="lastName" />
+	 	<c:if test="${empty employee.id == null }">
+	 		<!-- path属性对应 html 表单标签的 name 属性值 -->
+	 		LastName: <form:input path="lastName" />
+	 	</c:if>
+	 	<c:if test="${employee.id != null }">
+	 		<form:hidden path="id"/>
+	 		<!-- 对于 _method 不能使用 form:hidden 标签， 因为modelAttribute对应的bean中没有 _method这个属性 -->
+	 		<input type="hidden" name="_method" value="PUT"/>
+	 	</c:if>
+	 	
 	 	<br>
 	 	Email: <form:input path="email" />
 	 	<br>
