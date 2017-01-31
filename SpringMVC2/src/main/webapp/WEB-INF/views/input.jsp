@@ -10,6 +10,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<form action="${pageContext.request.contextPath }/testConversionServiceConverter" method="POST">
+		<!-- lastname-email-gender-department.id -->
+		Employee: <input type="text" name="employee" />
+		<input type="submit" value="Submit" />
+	 	
+	</form>
+	<br><br>
 	
 	<!-- 
 		1. 使用 form 标签的原因： 可以更快速的开发出表单页面，而且可以更方便的进行表单值的回显
