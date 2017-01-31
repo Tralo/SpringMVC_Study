@@ -1,8 +1,110 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.study.springstudy</groupId>
-  <artifactId>Springstudy2</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>study</name>
-  <description>study</description>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.study.springstudy</groupId>
+	<artifactId>Springstudy2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>study</name>
+	<description>study</description>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<!--1)spring核心依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<!--spring ioc依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<!--spring 扩展依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<!--2)spring dao层依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<!--3)spring web相关依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<!--4) spring test相关依赖 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.3.4.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator-annotation-processor</artifactId>
+			<version>5.1.3.Final</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- <plugin> <artifactId>maven-compiler-plugin</artifactId> <configuration> 
+				<source>1.6</source> <target>1.6</target> </configuration> </plugin> 使用 plugin 
+				配置tomcat-maven-plugin <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>tomcat7-maven-plugin</artifactId> 
+				<version>1.1</version> 对插件进行配置 <configuration> 内嵌插件 端口 <port>8080</port> 
+				远程发布 <url>http://localhost:8080/manager/text</url> <server>myserver</server> 
+				</configuration> </plugin> -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<port>8080</port>
+					<path>/springmvc2</path>
+					<url>http://localhost:8080/manager/text</url>
+					<username>admin</username>
+					<password>admin</password>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>
