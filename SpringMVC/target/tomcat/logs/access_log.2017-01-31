@@ -15,3 +15,5 @@
 0:0:0:0:0:0:0:1 - - [31/Jan/2017:10:58:02 +0800] "GET /springmvc/ HTTP/1.1" 200 2733 http-bio-8080-exec-4 4
 0:0:0:0:0:0:0:1 - - [31/Jan/2017:10:58:04 +0800] "GET /springmvc/helloworld HTTP/1.1" 200 448 http-bio-8080-exec-5 4
 0:0:0:0:0:0:0:1 - - [31/Jan/2017:10:58:07 +0800] "GET /springmvc/springmvc/testRequestMapping HTTP/1.1" 200 448 http-bio-8080-exec-6 3
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:11:09:25 +0800] "GET /springmvc/ HTTP/1.1" 200 2787 http-bio-8080-exec-1 723
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:11:09:29 +0800] "GET /springmvc/springmvc/testView HTTP/1.1" 200 46 http-bio-8080-exec-3 207

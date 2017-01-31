@@ -89,5 +89,7 @@
 	<br><br>
 	<a href="springmvc/testViewAndViewResolver">Test ViewAndViewResolver</a>
 	<br><br>
+	<a href="springmvc/testView">Test View</a>
+	<br><br>
 </body>
 </html>

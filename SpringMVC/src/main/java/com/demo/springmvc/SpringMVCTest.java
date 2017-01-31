@@ -22,6 +22,14 @@ import com.demo.springmvc.entity.User;
 public class SpringMVCTest {
 	
 	private static final String SUCCESS = "success";
+	
+	@RequestMapping("/testView")
+	public String testView(){
+		System.out.println("testView");
+		return "helloView";
+	}
+	
+	
 	/**
 	 * 有ModelAttribute 标记的方法，会在每个目标方法执行之前会被SpringMVC调用
 	 * @param id
