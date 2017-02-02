@@ -56,7 +56,9 @@
 	 		2. 数据类型格式化问题
 	 		3. 数据校验问题
 	 	 -->
-	 	<%-- Birth: <form:input path="birth" /> --%>
+	 	Birth: <form:input path="birth" />
+	 	<br>
+	 	Salary: <form:input path="salary" />
 	 	<br>
 	 	<input type="submit" value="Submit" />
 	 	
