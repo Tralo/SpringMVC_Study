@@ -26,10 +26,15 @@
 			如果该属性值也不存在，则会发生错误。
 	 -->
 	 <form:form action="${pageContext.request.contextPath }/emp" method="post" modelAttribute="employee">
+	 	
+	 	<form:errors path="*"></form:errors>
+	 	<br>
+	 	
 	 	<!-- path 属性对应html 表单标签 name 属性 -->
 	 	<c:if test="${employee.id == null }">
 	 		<!-- path属性对应 html 表单标签的 name 属性值 -->
 	 		LastName: <form:input path="lastName" />
+	 		<form:errors path="lastName"></form:errors>
 	 	</c:if>
 	 	<c:if test="${employee.id != null }">
 	 		<form:hidden path="id"/>
@@ -39,6 +44,7 @@
 	 	
 	 	<br>
 	 	Email: <form:input path="email" />
+	 	<form:errors path="email"></form:errors>
 	 	<br>
 	 	<%  Map<String,String> genders = new HashMap<String,String>(); 
 	 		genders.put("1", "Male");
@@ -55,8 +61,18 @@
 	 		1. 数据类型转换问题 
 	 		2. 数据类型格式化问题
 	 		3. 数据校验问题
+	 		1). 如何校验？注解？
+	 		1⃣️使用 JSR 303 验证标准
+	 		2⃣️加入hibernate validator验证框架
+	 		3⃣️在SpringMVC配置文件中添加 <mvc:annotation-driven/>
+	 		4⃣️需要在bean的属性上添加对应的注解
+	 		5⃣️在目标方法 bean类型的前面添加 @Valid 注解
+	 		2). 验证出错转向哪一个页面？
+	 		注意： 需校验的 Bean 对象和其绑定结果对象或错误对象时成对出现的，它们之间不允许声明其它的入参
+	 		3). 错误消息？如何显示，如何把错误消息进行国际化
 	 	 -->
 	 	Birth: <form:input path="birth" />
+	 	<form:errors path="birth"></form:errors>
 	 	<br>
 	 	Salary: <form:input path="salary" />
 	 	<br>
