@@ -1,13 +1,11 @@
 package com.study.springmvc.crud.handler;
 
-import java.beans.DefaultPersistenceDelegate;
 import java.util.Map;
 
-import javax.print.DocFlavor.INPUT_STREAM;
-
-import org.apache.catalina.authenticator.SavedRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -72,5 +70,9 @@ public class EmployeeHandler {
 		map.put("employees", employeeDao.getAll());
 		return "list";
 	}
+//	@InitBinder
+//	public void initBinder(WebDataBinder binder){
+//		binder.setDisallowedFields("lastName");
+//	}
 	
 }

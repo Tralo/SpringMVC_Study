@@ -160,3 +160,8 @@
 0:0:0:0:0:0:0:1 - - [31/Jan/2017:16:01:18 +0800] "GET /springmvc2/emps HTTP/1.1" 200 2080 http-bio-8080-exec-10 4
 0:0:0:0:0:0:0:1 - - [31/Jan/2017:16:01:20 +0800] "POST /springmvc2/emp/1007 HTTP/1.1" 302 - http-bio-8080-exec-10 2
 0:0:0:0:0:0:0:1 - - [31/Jan/2017:16:01:20 +0800] "GET /springmvc2/emps HTTP/1.1" 200 1849 http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:18:32:51 +0800] "GET /mavenbos/index.jsp HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:18:33:10 +0800] "GET /mavenbos/index.jsp HTTP/1.1" 404 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:18:33:13 +0800] "GET /mavenbos/index.jsp HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:18:33:18 +0800] "GET /mavenbos/index.jsp HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [31/Jan/2017:18:36:08 +0800] "GET /mavenbos/index.jsp HTTP/1.1" 404 - http-bio-8080-exec-6 0

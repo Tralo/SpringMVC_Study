@@ -27,7 +27,7 @@
 	 -->
 	 <form:form action="${pageContext.request.contextPath }/emp" method="post" modelAttribute="employee">
 	 	<!-- path 属性对应html 表单标签 name 属性 -->
-	 	<c:if test="${empty employee.id == null }">
+	 	<c:if test="${employee.id == null }">
 	 		<!-- path属性对应 html 表单标签的 name 属性值 -->
 	 		LastName: <form:input path="lastName" />
 	 	</c:if>
@@ -50,6 +50,13 @@
 	 	<form:radiobuttons path="gender" items="${genders }" delimiter="<br>" />
 	 	<br>
 	 	Department: <form:select path="department.id" items="${departments }" itemLabel="departmentName" itemValue="id"></form:select>
+	 	<br>
+	 	<!-- 
+	 		1. 数据类型转换问题 
+	 		2. 数据类型格式化问题
+	 		3. 数据校验问题
+	 	 -->
+	 	<%-- Birth: <form:input path="birth" /> --%>
 	 	<br>
 	 	<input type="submit" value="Submit" />
 	 	
