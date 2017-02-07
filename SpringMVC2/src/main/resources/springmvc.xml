@@ -40,6 +40,8 @@
 	
 	<!-- 配置 LocaleChangeInterceptor -->
 	<mvc:interceptors>
+		<!-- 配置自定义的拦截器 -->
+		<bean class="com.study.springmvc.interceptor.FirstInterceptor"></bean>
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
 	</mvc:interceptors>
 	
