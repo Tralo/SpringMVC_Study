@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.Date;
+import java.util.Locale;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +29,16 @@ public class SpringMVCTest {
 	
 	@Autowired
 	private EmployeeDao employeeDao;
+	
+	@Autowired
+	private ResourceBundleMessageSource messageSource;
+	
+	@RequestMapping("/i18n")
+	private String testI18n(Locale locale){
+		String val = messageSource.getMessage("i18n.user", null,locale);
+		System.out.println("val:  " + val);
+		return "i18n";
+	}
 	
 	
 	@RequestMapping("/testResponseEntity")
