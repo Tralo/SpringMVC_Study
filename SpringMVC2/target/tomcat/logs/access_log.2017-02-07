@@ -89,3 +89,5 @@
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:14:46:48 +0800] "GET /springmvc2/ HTTP/1.1" 200 1309 http-bio-8080-exec-7 2
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:14:46:51 +0800] "POST /springmvc2/testJson HTTP/1.1" 200 698 http-bio-8080-exec-8 130
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:14:47:01 +0800] "GET /springmvc2/emps HTTP/1.1" 200 2077 http-bio-8080-exec-9 86
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:00:45 +0800] "GET /springmvc2/ HTTP/1.1" 200 1309 http-bio-8080-exec-1 266
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:00:48 +0800] "GET /springmvc2/emps HTTP/1.1" 200 2077 http-bio-8080-exec-3 110
