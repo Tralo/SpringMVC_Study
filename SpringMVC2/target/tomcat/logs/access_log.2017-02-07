@@ -103,3 +103,9 @@
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:32:12 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 315 http-bio-8080-exec-1 1003
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:34:34 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 315 http-bio-8080-exec-1 335
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:40:18 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 315 http-bio-8080-exec-1 394
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:17:03:45 +0800] "GET /springmvc2/ HTTP/1.1" 200 1551 http-bio-8080-exec-1 882
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:17:03:47 +0800] "GET /springmvc2/testResponseStatusExceptionResolver?i=10 HTTP/1.1" 200 268 http-bio-8080-exec-3 38
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:17:03:52 +0800] "GET /springmvc2/testResponseStatusExceptionResolver?i=13 HTTP/1.1" 500 4228 http-bio-8080-exec-4 10
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:17:05:02 +0800] "GET /springmvc2/testResponseStatusExceptionResolver?i=13 HTTP/1.1" 403 1015 http-bio-8080-exec-1 297
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:17:06:40 +0800] "GET /springmvc2/testResponseStatusExceptionResolver?i=1 HTTP/1.1" 404 961 http-bio-8080-exec-1 291
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:17:06:46 +0800] "GET /springmvc2/testResponseStatusExceptionResolver?i=13 HTTP/1.1" 403 1015 http-bio-8080-exec-4 6

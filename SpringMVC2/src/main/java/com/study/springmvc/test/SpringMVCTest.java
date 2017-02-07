@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -37,6 +38,18 @@ public class SpringMVCTest {
 	
 	@Autowired
 	private ResourceBundleMessageSource messageSource;
+	
+	
+	@ResponseStatus(value=HttpStatus.NOT_FOUND,reason="测试")
+	@RequestMapping("testResponseStatusExceptionResolver")
+	public String testResponseStatusExceptionResolver(@RequestParam("i") int i){
+		if(i == 13){
+			throw new UserNameNotMatchPasswordException();
+		}
+		System.out.println("正常执行");
+		
+		return "success";
+	}
 	
 	
 	/*@ExceptionHandler({RuntimeException.class})

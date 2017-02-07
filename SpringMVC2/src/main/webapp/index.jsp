@@ -52,7 +52,9 @@
 	<a href="i18n">I18N PAGE</a>
 	
 	<br><br>
-	<a href="testExceptionHandlerExceptionResolver?i=10">Test ExceptionHandlerExceptionResolver?i=10</a>
+	<a href="testExceptionHandlerExceptionResolver?i=10">Test ExceptionHandlerExceptionResolver</a>
+	<br><br>
+	<a href="testResponseStatusExceptionResolver?i=10">Test ResponseStatusExceptionResolver</a>
 	
 
 </body>
