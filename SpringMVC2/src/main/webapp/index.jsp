@@ -33,6 +33,7 @@
 		<input type="submit" value="Submit"/>
 		
 	</form>
+	<br><br>
 
 	<a href="emps">List All Employees</a>
 	<br><br>
@@ -47,7 +48,11 @@
 	<br><br>
 	<a href="testResponseEntity">Test ResponseEntity</a>
 	
+	<br><br>
 	<a href="i18n">I18N PAGE</a>
+	
+	<br><br>
+	<a href="testExceptionHandlerExceptionResolver?i=10">Test ExceptionHandlerExceptionResolver?i=10</a>
 	
 
 </body>

@@ -91,3 +91,15 @@
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:14:47:01 +0800] "GET /springmvc2/emps HTTP/1.1" 200 2077 http-bio-8080-exec-9 86
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:00:45 +0800] "GET /springmvc2/ HTTP/1.1" 200 1309 http-bio-8080-exec-1 266
 0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:00:48 +0800] "GET /springmvc2/emps HTTP/1.1" 200 2077 http-bio-8080-exec-3 110
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:22:47 +0800] "GET /springmvc2 HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:22:48 +0800] "GET /springmvc2/ HTTP/1.1" 200 1443 http-bio-8080-exec-2 685
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:22:51 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=10 HTTP/1.1" 200 268 http-bio-8080-exec-3 33
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:23:58 +0800] "GET /springmvc2/ HTTP/1.1" 200 1443 http-bio-8080-exec-1 339
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:23:59 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=10 HTTP/1.1" 200 268 http-bio-8080-exec-2 57
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:24:08 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 500 4158 http-bio-8080-exec-3 12
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:26:40 +0800] "GET /springmvc2/ HTTP/1.1" 200 1443 http-bio-8080-exec-1 235
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:26:42 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=10 HTTP/1.1" 200 268 http-bio-8080-exec-3 48
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:26:46 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 273 http-bio-8080-exec-4 469
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:32:12 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 315 http-bio-8080-exec-1 1003
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:34:34 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 315 http-bio-8080-exec-1 335
+0:0:0:0:0:0:0:1 - - [07/Feb/2017:15:40:18 +0800] "GET /springmvc2/testExceptionHandlerExceptionResolver?i=0 HTTP/1.1" 200 315 http-bio-8080-exec-1 394
