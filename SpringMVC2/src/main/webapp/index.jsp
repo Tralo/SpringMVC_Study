@@ -40,6 +40,8 @@
 	<br><br>
 	<a href="testResponseEntity">Test ResponseEntity</a>
 	
+	<a href="i18n">I18N PAGE</a>
+	
 
 </body>
 </html>
